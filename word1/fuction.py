@@ -7,5 +7,7 @@ def home(request):
 def count(request):
     text1=request.GET['text']
     text= len(request.GET['text'])
-    
     return render(request,'count.html',context={'text': text, 'text1': text1})
+
+def about(request):
+    return render(request, 'about.html')
